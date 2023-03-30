@@ -8,10 +8,10 @@ import AO3
 def send_fic(url : str, email_address : str, password : str, kindle_email):
     port = 587
     fic_filename = ''
-    if ('archiveofourown' in url):
-        fic_filename = download_epub_from_ao3(url)
-    else:
-        fic_filename = download_epub_and_get_file_name(url)
+    # if ('archiveofourown' in url):
+    #     fic_filename = download_epub_from_ao3(url)
+    # else:
+    fic_filename = download_epub_and_get_file_name(url)
     print('fic downloaded!')
     email = smtplib.SMTP('smtp.gmail.com', port)
     email.ehlo()
